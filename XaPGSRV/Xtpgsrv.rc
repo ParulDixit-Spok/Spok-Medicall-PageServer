@@ -1,0 +1,699 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "xtpgsrv.h"
+#include "windows.h"
+#include "commctrl.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PAGESRV             ICON    DISCARDABLE     "RES\\pagesrv.ico"
+IDI_BLUE                ICON    DISCARDABLE     "res\\note300.ico"
+IDI_PURPLE              ICON    DISCARDABLE     "res\\note301.ico"
+IDI_STA1                ICON    DISCARDABLE     "res\\sta1.ico"
+IDI_STA2                ICON    DISCARDABLE     "res\\sta2.ico"
+IDI_STA3                ICON    DISCARDABLE     "res\\sta3.ico"
+IDI_STA4                ICON    DISCARDABLE     "res\\sta4.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&About Page Server...",       IDM_HELPABOUT
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Page",                       IDM_PAGE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Tile",                       IDM_WINDOWTILE
+        MENUITEM "&Cascade",                    IDM_WINDOWCASCADE
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM "D4x &Events",                 IDM_D4X_DIAGS
+        MENUITEM "&Data Scope",                 IDM_DATASCOPE, GRAYED
+    END
+    POPUP "Info"
+    BEGIN
+        MENUITEM "General",                     IDM_INFO_1
+        MENUITEM "Database",                    IDM_INFO_2
+        MENUITEM "Customer",                    IDM_INFO_3
+        MENUITEM "Parameters 1",                IDM_INFO_4
+        MENUITEM "Impaired Vendors",            IDM_INFO_5
+    END
+END
+
+IDR_PROG_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&About Page Server...",       IDM_HELPABOUT
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Page",                       IDM_PAGE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Tile",                       IDM_WINDOWTILE
+        MENUITEM "&Cascade",                    IDM_WINDOWCASCADE
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM "D4x &Events",                 IDM_D4X_DIAGS
+        MENUITEM "&Data Scope",                 IDM_DATASCOPE, GRAYED
+    END
+    POPUP "Info"
+    BEGIN
+        MENUITEM "General",                     IDM_INFO_1
+        MENUITEM "Database",                    IDM_INFO_2
+        MENUITEM "Customer",                    IDM_INFO_3
+        MENUITEM "Parameters 1",                IDM_INFO_4
+        MENUITEM "Impaired Vendors",            IDM_INFO_5
+    END
+    POPUP "MessageTypes"
+    BEGIN
+        MENUITEM "SET_STANDARD_MESSAGES",       IDM_SET_STANDARD_MESSAGES
+        MENUITEM "SET_DEBUG_MESSAGES",          IDM_SET_DEBUG_MESSAGES
+        MENUITEM "SET_ALL_MESSAGES",            IDM_SET_ALL_MESSAGES
+        MENUITEM "SET_NO_MESSAGES",             IDM_SET_NO_MESSAGES
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_SYSTEM",              IDM_MSGTYPE_SYSTEM, CHECKED
+        MENUITEM "MSGTYPE_ERROR",               IDM_MSGTYPE_ERROR, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_IVR",                 IDM_MSGTYPE_IVR_GENERAL
+        , CHECKED
+        MENUITEM "MSGTYPE_IVR_VOICE_PROMPT_TEXT",
+                                                IDM_MSGTYPE_IVR_VOICE_PROMPT_TEXT
+        , CHECKED
+        MENUITEM "MSGTYPE_DIALOGIC_4",          IDM_MSGTYPE_DIALOGIC_4
+        , CHECKED
+        MENUITEM "MSGTYPE_DIALOGIC_8",          IDM_MSGTYPE_DIALOGIC_8
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_DATABASE_COMMAND",    IDM_MSGTYPE_DATABASE_COMMAND
+        , CHECKED
+        MENUITEM "MSGTYPE_DATABASE_DATA",       IDM_MSGTYPE_DATABASE_DATA
+        , CHECKED
+        MENUITEM "MSGTYPE_DATABASE_DETAIL",     IDM_MSGTYPE_DATABASE_DETAIL
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_DEBUG",               IDM_MSGTYPE_DEBUG_1000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_2000",          IDM_MSGTYPE_DEBUG_2000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_4000",          IDM_MSGTYPE_DEBUG_4000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_8000",          IDM_MSGTYPE_DEBUG_8000
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_COMM",                IDM_MSGTYPE_COMM_GENERAL
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_ERROR",          IDM_MSGTYPE_COMM_ERROR
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_DTR",            IDM_MSGTYPE_COMM_DTR
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_RESET",          IDM_MSGTYPE_COMM_RESET
+        , CHECKED
+    END
+    POPUP "SQL"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Sequence 3 - (SELECT * FROM Xkm) - 5 records",
+                                                IDM_SQL_SEQUENCE3
+        MENUITEM "Sequence 4 - (SELECT * FROM Pagers) - 5 records",
+                                                IDM_SQL_SEQUENCE4
+        MENUITEM "Sequence 5 - (SELECT * FROM Xnfrq) - 5 records",
+                                                IDM_SQL_SEQUENCE5
+    END
+    POPUP "Exception"
+    BEGIN
+        MENUITEM "Access",                      IDM_EXCEPTION_ACCESS
+        MENUITEM "Divide by Zero",              IDM_EXCEPTION_ZERO_DIVIDE
+    END
+    POPUP "MessageComPorts"
+    BEGIN
+        MENUITEM "SET_ALL_PORTS",               IDM_SET_ALL_PORTS
+        MENUITEM "SET_NO_PORTS",                IDM_SET_NO_PORTS
+        MENUITEM SEPARATOR
+        MENUITEM "DEVTYPE_COM_1",               IDM_DEVTYPE_COM_1, CHECKED
+        MENUITEM "DEVTYPE_COM_2",               IDM_DEVTYPE_COM_2, CHECKED
+        MENUITEM "DEVTYPE_COM_3",               IDM_DEVTYPE_COM_3, CHECKED
+        MENUITEM "DEVTYPE_COM_4",               IDM_DEVTYPE_COM_4, CHECKED
+        MENUITEM "DEVTYPE_COM_5",               IDM_DEVTYPE_COM_5, CHECKED
+        MENUITEM "DEVTYPE_COM_6",               IDM_DEVTYPE_COM_6, CHECKED
+        MENUITEM "DEVTYPE_COM_7",               IDM_DEVTYPE_COM_7, CHECKED
+        MENUITEM "DEVTYPE_COM_8",               IDM_DEVTYPE_COM_8, CHECKED
+        MENUITEM "DEVTYPE_COM_9",               IDM_DEVTYPE_COM_9, CHECKED
+        MENUITEM "DEVTYPE_COM_8",               IDM_DEVTYPE_COM_8, CHECKED
+        MENUITEM "DEVTYPE_COM_10",              IDM_DEVTYPE_COM_10, CHECKED
+    END
+    POPUP "MessageLines"
+    BEGIN
+        MENUITEM "SET_ALL_LINES",               IDM_SET_ALL_LINES
+        MENUITEM "SET_NO_LINES",                IDM_SET_NO_LINES
+        MENUITEM SEPARATOR
+        MENUITEM "DEVTYPE_IVR_1",               IDM_DEVTYPE_IVR_1, CHECKED
+        MENUITEM "DEVTYPE_IVR_2",               IDM_DEVTYPE_IVR_2, CHECKED
+        MENUITEM "DEVTYPE_IVR_3",               IDM_DEVTYPE_IVR_3, CHECKED
+        MENUITEM "DEVTYPE_IVR_4",               IDM_DEVTYPE_IVR_4, CHECKED
+        MENUITEM "DEVTYPE_IVR_5",               IDM_DEVTYPE_IVR_5, CHECKED
+        MENUITEM "DEVTYPE_IVR_6",               IDM_DEVTYPE_IVR_6, CHECKED
+        MENUITEM "DEVTYPE_IVR_7",               IDM_DEVTYPE_IVR_7, CHECKED
+        MENUITEM "DEVTYPE_IVR_8",               IDM_DEVTYPE_IVR_8, CHECKED
+        MENUITEM "DEVTYPE_IVR_9",               IDM_DEVTYPE_IVR_9, CHECKED
+        MENUITEM "DEVTYPE_IVR_10",              IDM_DEVTYPE_IVR_10, CHECKED
+        MENUITEM "DEVTYPE_IVR_11",              IDM_DEVTYPE_IVR_11, CHECKED
+        MENUITEM "DEVTYPE_IVR_12",              IDM_DEVTYPE_IVR_12, CHECKED
+    END
+    POPUP "SendTestPage"
+    BEGIN
+        MENUITEM "Alpha Page (using 9 for outside line)",
+                                                IDM_SEND_ALPHA_PAGE1
+        MENUITEM "Alpha Page (without 9 for outside line)",
+                                                IDM_SEND_ALPHA_PAGE2
+        MENUITEM "Scheduled Alpha Page (5 minutes)",
+                                                IDM_SEND_SCHEDULED_ALPHA_PAGE
+
+        MENUITEM "Scheduled Voice Page (0 minutes)",
+                                                IDM_SEND_SCHEDULED_VOICE_PAGE
+
+        MENUITEM "Scheduled Overhead Page (0 minutes)",
+                                                IDM_SEND_SCHEDULED_OVERHEAD_PAGE
+
+        MENUITEM "Overhead Page ",              IDM_SEND_OVERHEAD_PAGE
+        MENUITEM "Numeric Page",                IDM_SEND_NUMERIC_PAGE
+        MENUITEM "Talk Page 1",                 IDM_SEND_TALK_PAGE_1
+        MENUITEM "Talk Page 2",                 IDM_SEND_TALK_PAGE_2
+        MENUITEM "Talk Page 3",                 IDM_SEND_TALK_PAGE_3
+        MENUITEM "Voice Page 1",                IDM_SEND_VOICE_PAGE_1
+        MENUITEM "Voice Page 2",                IDM_SEND_VOICE_PAGE_2
+        MENUITEM "List Page 1",                 IDM_SEND_LIST_PAGE1
+        MENUITEM "List Page 2",                 IDM_SEND_LIST_PAGE2
+        MENUITEM "List Page 3",                 IDM_SEND_LIST_PAGE3
+        MENUITEM "List Page 4",                 IDM_SEND_LIST_PAGE4
+        MENUITEM "OnCall Page",                 IDM_SEND_ONCALL_PAGE
+        MENUITEM "Multiple Alpha Pages",        IDM_SEND_3_ALPHA_PAGES
+        MENUITEM "Bad Page (will be cancelled)", IDM_SEND_BAD_PAGE
+    END
+    POPUP "Misc"
+    BEGIN
+        MENUITEM "Test - List Page Printout",   IDM_MISC_4
+        MENUITEM "Test - Cancelled Page Printout", IDM_MISC_5
+        MENUITEM "Show ACTIVE Impairment Profiles",
+                                                ID_MISC_SHOW_ACTIVE_IMPAIRED
+        MENUITEM "Show ALL Impairment Profiles", ID_MISC_SHOW_ALL_IMPAIRED
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Show Command Line Help",      IDM_SHOW_COMMAND_LINE_HELP
+    END
+    POPUP "MoreInfo"
+    BEGIN
+        MENUITEM "General",                     IDM_INFO_1
+        MENUITEM "Database",                    IDM_INFO_2
+        MENUITEM "Customer",                    IDM_INFO_3
+        MENUITEM "Parameters 1",                IDM_INFO_4
+        MENUITEM "ccc",                         IDM_INFO_5
+        MENUITEM "fff",                         IDM_INFO_6
+        MENUITEM "ggg",                         IDM_INFO_7
+        MENUITEM "hhh",                         IDM_INFO_8
+        MENUITEM "iii",                         IDM_INFO_9
+    END
+    POPUP "Action Reminders"
+    BEGIN
+        MENUITEM "Commport Failure",            IDM_MISC_SCHEDULER_70
+        MENUITEM "Queue Warning",               IDM_MISC_SCHEDULER_71
+        MENUITEM "Cancelled Page",              IDM_MISC_SCHEDULER_72
+        MENUITEM "Application Exit",            IDM_MISC_SCHEDULER_73
+        MENUITEM "Queue Access",                IDM_MISC_SCHEDULER_74
+    END
+END
+
+IDR_ALT_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&About Page Server...",       IDM_HELPABOUT
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Page",                       IDM_PAGE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Tile",                       IDM_WINDOWTILE
+        MENUITEM "&Cascade",                    IDM_WINDOWCASCADE
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM "D4x &Events",                 IDM_D4X_DIAGS
+        MENUITEM "&Data Scope",                 IDM_DATASCOPE, GRAYED
+    END
+    POPUP "Info"
+    BEGIN
+        MENUITEM "General",                     IDM_INFO_1
+        MENUITEM "Database",                    IDM_INFO_2
+        MENUITEM "Customer",                    IDM_INFO_3
+        MENUITEM "Parameters 1",                IDM_INFO_4
+        MENUITEM "Impaired Vendors",            IDM_INFO_5
+    END
+    POPUP "MessageTypes"
+    BEGIN
+        MENUITEM "SET_STANDARD_MESSAGES",       IDM_SET_STANDARD_MESSAGES
+        MENUITEM "SET_DEBUG_MESSAGES",          IDM_SET_DEBUG_MESSAGES
+        MENUITEM "SET_ALL_MESSAGES",            IDM_SET_ALL_MESSAGES
+        MENUITEM "SET_NO_MESSAGES",             IDM_SET_NO_MESSAGES
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_SYSTEM",              IDM_MSGTYPE_SYSTEM, CHECKED
+        MENUITEM "MSGTYPE_ERROR",               IDM_MSGTYPE_ERROR, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_IVR",                 IDM_MSGTYPE_IVR_GENERAL
+        , CHECKED
+        MENUITEM "MSGTYPE_IVR_VOICE_PROMPT_TEXT",
+                                                IDM_MSGTYPE_IVR_VOICE_PROMPT_TEXT
+        , CHECKED
+        MENUITEM "MSGTYPE_DIALOGIC_4",          IDM_MSGTYPE_DIALOGIC_4
+        , CHECKED
+        MENUITEM "MSGTYPE_DIALOGIC_8",          IDM_MSGTYPE_DIALOGIC_8
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_DATABASE_COMMAND",    IDM_MSGTYPE_DATABASE_COMMAND
+        , CHECKED
+        MENUITEM "MSGTYPE_DATABASE_DATA",       IDM_MSGTYPE_DATABASE_DATA
+        , CHECKED
+        MENUITEM "MSGTYPE_DATABASE_DETAIL",     IDM_MSGTYPE_DATABASE_DETAIL
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_DEBUG",               IDM_MSGTYPE_DEBUG_1000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_2000",          IDM_MSGTYPE_DEBUG_2000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_4000",          IDM_MSGTYPE_DEBUG_4000
+        , CHECKED
+        MENUITEM "MSGTYPE_DEBUG_8000",          IDM_MSGTYPE_DEBUG_8000
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "MSGTYPE_COMM",                IDM_MSGTYPE_COMM_GENERAL
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_ERROR",          IDM_MSGTYPE_COMM_ERROR
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_DTR",            IDM_MSGTYPE_COMM_DTR
+        , CHECKED
+        MENUITEM "MSGTYPE_COMM_RESET",          IDM_MSGTYPE_COMM_RESET
+        , CHECKED
+    END
+    POPUP "SQL"
+    BEGIN
+        MENUITEM "Sequence 1 - (Drop Stored Procedures)", IDM_SQL_SEQUENCE1
+        MENUITEM "Sequence 2 - (Create Stored Procedures)",
+                                                IDM_SQL_SEQUENCE2
+        MENUITEM SEPARATOR
+        MENUITEM "Sequence 3 - (SELECT * FROM Xkm) - 5 records",
+                                                IDM_SQL_SEQUENCE3
+        MENUITEM "Sequence 4 - (SELECT * FROM Pagers) - 5 records",
+                                                IDM_SQL_SEQUENCE4
+        MENUITEM "Sequence 5 - (SELECT * FROM Xnfrq) - 5 records",
+                                                IDM_SQL_SEQUENCE5
+        MENUITEM SEPARATOR
+        MENUITEM "Command 1 - (SELECT * FROM Xkm) - until EOF",
+                                                IDM_SQL_COMMAND1
+        MENUITEM "Command 2 - (SELECT * FROM Pagers) - until EOF",
+                                                IDM_SQL_COMMAND2
+        MENUITEM "Command 3 - (SELECT * FROM Xnfrq) - until EOF",
+                                                IDM_SQL_COMMAND3
+    END
+    POPUP "Action Reminders"
+    BEGIN
+        MENUITEM "Commport Failure",            IDM_MISC_SCHEDULER_70
+        MENUITEM "Queue Warning",               IDM_MISC_SCHEDULER_71
+        MENUITEM "Cancelled Page",              IDM_MISC_SCHEDULER_72
+        MENUITEM "Application Exit",            IDM_MISC_SCHEDULER_73
+        MENUITEM "Queue Access",                IDM_MISC_SCHEDULER_74
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 250, 156
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Spok PageServer"
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "Spok",IDC_STATIC,40,10,160,8
+    CTEXT           "PageServer",IDC_STATIC,40,25,160,8
+    CTEXT           "Copyright (c) 2017 Spok, Inc.",IDC_STATIC,35,
+                    100,160,8,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "OK",IDOK,110,125,32,14,WS_GROUP
+    ICON            IDI_PAGESRV,IDC_STATIC,16,26,20,20
+    EDITTEXT        IDC_APP_VERSION,40,40,160,12,ES_CENTER | ES_READONLY |
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EXE_NAME,40,58,160,12,ES_CENTER | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_D4X_DIALOG DIALOGEX 0, 0, 265, 164
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Dialogic Diagnostics"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,208,143,50,14
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS |
+                    TBS_TOP | WS_TABSTOP,59,82,199,25,WS_EX_DLGMODALFRAME
+    LTEXT           "Volume",IDC_STATIC,7,82,42,9
+    PUSHBUTTON      "On Hook",IDC_ONHOOK,7,143,50,14
+    DEFPUSHBUTTON   "Off Hook",IDC_OFFHOOK,74,143,50,14
+    LTEXT           "Paging Server State: ",IDC_D4X_STATE,173,12,85,8
+    LTEXT           "Status:",IDC_D4X_STATUS,16,12,152,8
+    CONTROL         "Slider1",IDC_SLIDER2,"msctls_trackbar32",TBS_AUTOTICKS |
+                    TBS_TOP | WS_TABSTOP,59,113,199,25,WS_EX_DLGMODALFRAME
+    LTEXT           "Speed",IDC_STATIC,7,115,42,8
+    DEFPUSHBUTTON   "Test Tone",IDC_TESTTONE,141,143,50,14
+    DEFPUSHBUTTON   "Refresh",IDC_REFRESH,7,62,50,14
+    LTEXT           "Error:",IDC_D4X_ERROR,16,38,168,8
+    LTEXT           "Hook State:",IDC_D4X_HOOK_ST,16,26,242,8
+    CTEXT           "0 DB",IDC_VOLUME_LEVEL,16,94,38,10,SS_SUNKEN
+    CTEXT           "0",IDC_SPEED_LEVEL,16,127,38,10,SS_SUNKEN
+END
+
+IDD_DATASCOPE DIALOG DISCARDABLE  0, 0, 376, 285
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Fixedsys"
+BEGIN
+    PUSHBUTTON      "Notes",IDC_NOTES,312,61,55,16
+    LISTBOX         IDC_DSLIST,7,83,362,175,LBS_NOINTEGRALHEIGHT | LBS_NOSEL |
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Hex Mode",IDC_HEX,312,42,55,16
+    PUSHBUTTON      "Open Log",IDC_LOGFILE,311,24,55,16
+    PUSHBUTTON      "1",IDC_BUTTON1,55,2,16,16,WS_DISABLED
+    PUSHBUTTON      "2",IDC_BUTTON2,75,2,16,16,WS_DISABLED
+    PUSHBUTTON      "3",IDC_BUTTON3,100,2,16,16,WS_DISABLED
+    PUSHBUTTON      "4",IDC_BUTTON4,120,2,16,16,WS_DISABLED
+    PUSHBUTTON      "5",IDC_BUTTON5,140,2,16,16,WS_DISABLED
+    PUSHBUTTON      "6",IDC_BUTTON6,160,2,16,16,WS_DISABLED
+    PUSHBUTTON      "7",IDC_BUTTON7,180,2,16,16,WS_DISABLED
+    PUSHBUTTON      "8",IDC_BUTTON8,200,2,16,16,WS_DISABLED
+    PUSHBUTTON      "9",IDC_BUTTON9,220,2,16,16,WS_DISABLED
+    PUSHBUTTON      "10",IDC_BUTTON10,240,2,16,16,WS_DISABLED
+    PUSHBUTTON      "11",IDC_BUTTON11,100,22,16,16,WS_DISABLED
+    PUSHBUTTON      "12",IDC_BUTTON12,120,22,16,16,WS_DISABLED
+    PUSHBUTTON      "13",IDC_BUTTON13,140,22,16,16,WS_DISABLED
+    PUSHBUTTON      "14",IDC_BUTTON14,160,22,16,16,WS_DISABLED
+    PUSHBUTTON      "15",IDC_BUTTON15,180,22,16,16,WS_DISABLED
+    PUSHBUTTON      "16",IDC_BUTTON16,200,22,16,16,WS_DISABLED
+    PUSHBUTTON      "17",IDC_BUTTON17,220,22,16,16,WS_DISABLED
+    PUSHBUTTON      "18",IDC_BUTTON18,240,22,16,16,WS_DISABLED
+    PUSHBUTTON      "19",IDC_BUTTON19,100,42,16,16,WS_DISABLED
+    PUSHBUTTON      "20",IDC_BUTTON20,120,42,16,16,WS_DISABLED
+    PUSHBUTTON      "21",IDC_BUTTON21,140,42,16,16,WS_DISABLED
+    PUSHBUTTON      "22",IDC_BUTTON22,160,42,16,16,WS_DISABLED
+    PUSHBUTTON      "23",IDC_BUTTON23,180,42,16,16,WS_DISABLED
+    PUSHBUTTON      "24",IDC_BUTTON24,200,42,16,16,WS_DISABLED
+    PUSHBUTTON      "25",IDC_BUTTON25,220,42,16,16,WS_DISABLED
+    PUSHBUTTON      "26",IDC_BUTTON26,240,42,16,16,WS_DISABLED
+    PUSHBUTTON      "27",IDC_BUTTON27,100,62,16,16,WS_DISABLED
+    PUSHBUTTON      "28",IDC_BUTTON28,120,62,16,16,WS_DISABLED
+    PUSHBUTTON      "29",IDC_BUTTON29,140,62,16,16,WS_DISABLED
+    PUSHBUTTON      "30",IDC_BUTTON30,160,62,16,16,WS_DISABLED
+    PUSHBUTTON      "31",IDC_BUTTON31,180,62,16,16,WS_DISABLED
+    PUSHBUTTON      "32",IDC_BUTTON32,200,62,16,16,WS_DISABLED
+    PUSHBUTTON      "33",IDC_BUTTON33,220,62,16,16,WS_DISABLED
+    PUSHBUTTON      "34",IDC_BUTTON34,240,62,16,16,WS_DISABLED
+    CTEXT           "Com Ports:",IDC_STATIC,7,7,41,12
+    PUSHBUTTON      "Stop Scroll",IDC_SCROLL,311,6,55,16
+    LTEXT           "Reset:",IDC_STATIC,8,269,27,9
+    LTEXT           "Errors:",IDC_STATIC,80,268,32,10
+    LTEXT           "Status:",IDC_STATIC,245,269,30,8
+    LTEXT           "0",IDC_RESET,35,269,41,9
+    LTEXT           "0",IDC_ERRORS,112,268,47,9
+    LTEXT           "Talk Timeout",IDC_STATUS,277,268,50,16
+    LTEXT           "Cancels:",IDC_STATIC,164,270,32,8
+    LTEXT           "0",IDC_CANCEL,200,270,41,9
+    PUSHBUTTON      "Refresh",IDC_BUTTON111,332,266,37,16
+END
+
+IDD_TGEN_DIALOG DIALOG DISCARDABLE  0, 0, 210, 122
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "Tone Generation template..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "tg_freq1",IDC_STATIC,14,12,39,8
+    LTEXT           "tg_freq2",IDC_STATIC,14,28,32,8
+    LTEXT           "tg_ampl1",IDC_STATIC,14,44,35,8
+    LTEXT           "tg_ampl2",IDC_STATIC,14,60,33,8
+    LTEXT           "tg_dur",IDC_STATIC,14,76,32,8
+    EDITTEXT        IDC_EDIT1,53,10,25,12
+    EDITTEXT        IDC_EDIT2,53,26,25,12
+    EDITTEXT        IDC_EDIT3,53,42,25,12
+    EDITTEXT        IDC_EDIT4,53,58,25,12
+    EDITTEXT        IDC_EDIT5,53,74,25,12
+    LTEXT           "Hz",IDC_STATIC,85,12,30,8
+    LTEXT           "Hz",IDC_STATIC,85,28,31,8
+    LTEXT           "dB",IDC_STATIC,84,45,30,8
+    LTEXT           "dB",IDC_STATIC,85,60,30,8
+    LTEXT           "10 ms",IDC_STATIC,85,75,30,8
+    DEFPUSHBUTTON   "&Generate Tone",ID_MAKE_TONE,131,6,53,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,131,23,54,14
+    PUSHBUTTON      "&Default",IDC_DEFAULT,131,73,55,14
+END
+
+IDD_QUEUE DIALOGEX 0, 0, 521, 151
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Queue Information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,464,130,50,14
+    PUSHBUTTON      "Empty Queue",IDC_RESET,351,130,50,14
+    CONTROL         "List4",IDC_LIST4,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,
+                    7,507,115,WS_EX_CLIENTEDGE
+END
+
+IDD_PAGE DIALOGEX 0, 0, 237, 175
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Paging"
+FONT 12, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,50,9,50,12,ES_UPPERCASE
+    PUSHBUTTON      "PAGE",IDOK,119,143,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,177,143,50,14
+    PUSHBUTTON      "Edit",ID_EDIT,60,143,50,14
+    EDITTEXT        IDC_EDIT7,45,25,185,12,ES_AUTOHSCROLL | WS_DISABLED
+    COMBOBOX        IDC_COMBO1,7,58,142,80,CBS_DROPDOWN | WS_VSCROLL |
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT5,44,78,25,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT8,80,78,150,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT6,50,95,180,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT2,55,113,175,23,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STATUS,155,58,75,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Pager Id:",IDC_STATIC,5,11,37,9
+    LTEXT           "Page Type:",IDC_STATIC,3,81,37,8
+    LTEXT           "Message:",IDC_STATIC,5,114,35,11
+    EDITTEXT        IDC_EDIT3,55,113,175,12,ES_AUTOHSCROLL | ES_NUMBER | NOT
+                    WS_VISIBLE
+    LTEXT           "Profile Id:",IDC_STATIC,132,11,40,10
+    EDITTEXT        IDC_EDIT4,180,9,50,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Status:",IDC_STATIC,10,46,26,10
+    LTEXT           "Name:",IDC_STATIC,5,26,25,10
+    LTEXT           "CapCode:",IDC_STATIC,4,97,32,8
+    LTEXT           "Covered By:",IDC_STATIC,157,47,41,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#include ""xtpgsrv.h""\r\n"
+    "#include ""windows.h""\r\n"
+    "#include ""commctrl.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE
+BEGIN
+    IDD_D4X_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        VERTGUIDE, 16
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 20
+    END
+
+    IDD_DATASCOPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 369
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 278
+    END
+
+    IDD_TGEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_QUEUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 514
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        VERTGUIDE, 15
+        VERTGUIDE, 52
+        VERTGUIDE, 60
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+        HORZGUIDE, 37
+        HORZGUIDE, 76
+        HORZGUIDE, 101
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,6,0
+ PRODUCTVERSION 1,0,6,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Spok, Inc.\0"
+            VALUE "FileDescription", "PageServer\0"
+            VALUE "FileVersion", "1, 0, 6, 0"
+            VALUE "InternalName", "\0"
+            VALUE "LegalCopyright", "Copyright (c) 2017  Spok, Inc.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PageServer Engine\0"
+            VALUE "ProductVersion", "1, 0, 6, 0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_APP_NAME            "Spok PageServer"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

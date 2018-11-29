@@ -1,0 +1,298 @@
+98
+*       *       *       *       *       *       *       *
+
+
+%%O
+Office Number
+%TF030~%N0%T
+%%P
+Home Number
+%TF030~%N0%T
+%00
+Misc Number 
+%TF030~%N0%T
+%AH
+Backup Number
+%TF030~%N0%T
+%%V
+Voice Mail
+%TF030~%N0%T
+%01
+Direct Dial Number
+%TF030~%N0%T
+%02
+Fax Number
+%N0
+%03
+Cellular Number
+%TF030~%N0%T
+%05
+Authorization Code
+%N0
+%06
+After Hours Number 
+%TF030~%N0%T
+%07
+Vocera Number
+%TF030~%N0%T
+%08
+Cost Center Dial Number
+%TF030~%N0%T
+%09
+Patient Room
+%TF030~%N0%T
+%10
+Nurse Station
+%TF030~%N0%T
+%11
+Private Number
+%TF030~%N0%T
+%12
+Department
+%TF030~%N0%T
+%13
+MSG Pad page
+%m6%m3%Si=%L1 %L2 %L3 %L4 %L5 %L6 %L7 %L8i
+%14
+Alternate Number
+%TF030~%N0%T
+%HT
+HTML
+%H%N0%H
+%21
+Priority List Page
+%Z%I1+%I2%Z
+%22
+List Page Alpha
+%Q21%Z0+%IF%Z
+%23
+Standard Priority List Page
+%Z%I1+%I2%Z
+%24
+Overhead Paging
+%M1%TF003~141~~%A%TWE
+%25
+Code Overhead
+%TF003~141~~9559*%TWE
+%26
+Radiology Overhead (not used)
+%TF003~141~~335%TWE
+%27
+Overhead Note
+%b%f%n%m3%Z%I2%Z
+%28
+Radiology Note
+%f%b%n%ZRADIOLOGY OVERHEAD %I3%Z
+%29
+Code Note
+%f%b%n%ZCODE OVERHEAD %I3%Z
+%44$120$
+St.Mary's Spectralink Phones {4 digit Phone Number}
+%Z%N0+i%Zi=%I2i
+%45$20$
+St.Mary's Pocsag 512 Numeric Pager Zetron-16 {7 digit cap code}
+%Z3%N01000+i%Zi=%I1i
+%46$240$
+St.Mary's Pocsag 512 Alpha Pager Zetron-16 {7 digit cap code}
+%Z3%N02100+i%Zi=%I2i
+%47$240$
+Verizon Alpha Page {10 Digit Cell Phone Number}
+%Z9,18663374504+%N0+%I2 i%Zi=i
+%48$240$
+Cingular Alpha Page {10 Digit Cell Phone Number}
+%Z9,18009094602+%N0+%I2 i%Zi=i
+%49$0$
+Tone only
+%ZT9,%N0+i%Zi=%I2i
+%50$20$
+Zetron 2100 Numeric Pager {4 Digit Pager Number}
+%Z%N0+i%Zi=%I1i
+%51$240$
+Zetron 2100 Alpha Pager	{4 Digit Pager Number}
+%Z%N0+i%Zi=%I2i
+%52$240$
+iNet American Messaging Alpha {10 Digit Pager Phone Number}
+%Z%N0+i%Zi=%I2i
+%53$160$
+Mobile Connect	{10 Digit Cell Phone Number}
+%r4%p2%Z%N0+i%Zi=%I2i	
+%54$20$
+USA Mobility Numeric iNet {10 Digit Pager Phone Number}
+%Z%N0+i%Zi=%I1i
+%55$240$
+USA Mobility ALPHA iNet {10 Digit Pager Phone Number}
+%Z%N0+i%Zi=%I2i
+%56$20$
+Misc IXO Numeric Pager {Modem # + Pager #}
+%Z%N0+%N1+i%Zi=%I1i
+%57$240$
+Misc IXO Alpha Pager {Modem # + Pager #}
+%Z%N0+%N1+i%Zi=%I2i
+%58$240$
+ASCOM Phone Page {5 Digit Phone Number}
+%Z%N0+i%Zi=%I2i
+%59$240$
+CELL Phone Page {10 Digit Cell Phone Number}
+%Z%N0+i%Zi=%I2i
+%60$20$
+Misc Numeric Pager w CP {# only}
+%Q62%ZT9,%N0+i%Zi=%I1i
+%61$20$
+Misc Numeric Pager w CP {#+id}
+%ZT9,%N0+%N1+i%Zi=%I1i
+%62$20$
+Misc Numeric Pager no CP {# only}
+%Q62%ZT9,%N0+i%Zi=%I1i
+%63$20$
+Misc Numeric Pager no CP {#+id}
+%Q62%ZT9,%N0+%N1+i%Zi=%I1i
+%64$20$
+Nurse Pager    {# only}
+%Q62%ZT9,%N0+i%Zi=%I1i
+%65
+Group on call    {# only}
+%Q62%ZT9,%N0+i%Zi=%I1i
+%66
+Page Default Pager
+%w%S
+%67
+Park & Page
+%M02%m3%TF030~#9~%A~F030%T%Si=%I1i
+%68
+Park Retrieve with Caller
+%M02%m3%TF029~#7~%A%TW%TF029%T
+%69
+Failsafe Beep
+%n%f%TF003~46470%TW%T%Y#%TW%T%I1#%T
+%70
+Park
+%M02%m3%TF030~~#9~%A~F030%TE
+%71
+Park Retrieve without Caller
+%M02%m3%TF003~#7~%A%T
+%72
+Page Default Pager
+%S
+%80
+Staff In
+%TF004~%I1%~TE
+%81
+Auto In
+%TF005%T
+%82
+Aux/Work
+%TF006%T
+%83
+Queue Calls
+%TF032%T
+%84
+Dial Nurses Station
+%TF030~%10%T
+%85
+Adult Cardiac Arrest
+%TF006%T%PRADULTCA%PR%GTO
+%86
+Pediatric Cardiac Arrest
+%TF006%T%PRPEDICA%PR%GTO
+%87
+Adult Trauma
+%TF006%T%PRTRAUMAAD%PR%GTO
+%88
+Pediatric Trauma
+%TF006%T%PRTRAUMAPD%PR%GTO
+%89
+Stat HRT
+%TF006%T%PRSTATHRT%PR%GTO
+%90
+Default Dial Number
+%TF030~%y%T
+%91
+Line 1
+%TF000%T
+%92
+Line 2
+%TF001%T
+%93
+Line 3
+%TF002%T
+%94
+Line 4
+%TF003%T
+%95
+Line 5
+%TF000=4%T
+%96
+Logout
+%TF013%T
+%AC
+Answer Call
+%%I
+%EC
+End Call
+%TF030%TE
+%%R
+Remote Number
+%TF030~%N0%T
+%CT
+Cancel Xfer
+%TF031%T,%TF000%T
+%CK
+Conference Key
+%TF029~%I1%TW%TF029%T
+%DK
+Drop Key
+%z014
+%DN
+Dial Number
+%%D
+%HK
+Hold Key
+%z012
+%MK
+Mute Key
+%z012
+%RK
+Release Key
+%TF007%T
+%SK
+Speaker
+%a900
+%TK
+Transfer Key
+%TF030%T
+%CP
+Call Pickup
+%TF003~#4%T
+%ON
+OnHook
+%a048
+%OH
+OffHook
+%a049
+%DE
+Default E-Mail Address
+E_Mail
+%DF
+Default Fax Number
+%TF030~N0%T
+%LD
+Long Distance Log (not used)
+%f%c%C%TF030~%Z%I1%Z%T
+%EM
+E-Mail Address
+E_Mail
+%PR
+Printer
+Printer For Delivery Center
+%DP
+Default Printer
+Printer For Delivery Center
+%ND
+PDF Document
+%%M\\SJSXtendSQL1\Amcom\console\data\downloadabledocuments\%N0%%M
+%PT
+Picture
+Picture
+%NB
+No Number
+No Macro
