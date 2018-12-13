@@ -6,7 +6,7 @@
     <LocalDebuggerWorkingDirectory>C:\xtend\PageSrv4</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <RemoteDebuggerCommand>C:\xtend\PageSrv4\XaPGSRV.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerCommand>C:\Spok\PageSrv4\XaPGSRV.exe</RemoteDebuggerCommand>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <RemoteDebuggerServerName>10.13.87.148</RemoteDebuggerServerName>
@@ -15,7 +15,7 @@
     <RemoteDebuggerDebuggerType>NativeOnly</RemoteDebuggerDebuggerType>
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
-    <RemoteDebuggerWorkingDirectory>C:\xtend\PageSrv4</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerWorkingDirectory>C:\Spok\PageSrv4</RemoteDebuggerWorkingDirectory>
     <RemoteDebuggerCommandArguments>
     </RemoteDebuggerCommandArguments>
   </PropertyGroup>

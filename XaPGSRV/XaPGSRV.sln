@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XaPGSRV", "XaPGSRV.vcxproj", "{C5F36C71-51C9-FE6C-90CB-CAA077100FD1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XaPGSRV", "XaPGSRV.vcxproj", "{B7D4FDBD-3435-F0C3-ABB7-EB8B2AA01542}"
 	ProjectSection(ProjectDependencies) = postProject
 		{90CFC619-E278-FB2F-2ACF-AEEF0389077A} = {90CFC619-E278-FB2F-2ACF-AEEF0389077A}
 	EndProjectSection

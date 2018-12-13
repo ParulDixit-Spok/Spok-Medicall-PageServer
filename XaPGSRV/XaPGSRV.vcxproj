@@ -24,7 +24,6 @@
     <SccLocalPath>
     </SccLocalPath>
     <Keyword>MFCProj</Keyword>
-    <ProjectGuid>{C5F36C71-51C9-FE6C-90CB-CAA077100FD1}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -153,11 +152,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(TargetDir)$(ProjectName).* \\10.13.87.148\C\xtend\pagesrv4\ /Y /U</Command>
+      <Command>xcopy $(TargetDir)$(ProjectName).* \\10.13.87.148\C\Spok\pagesrv4\ /Y /U</Command>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>powershell.exe -File "$(ProjectDir)..\packages\AmcomBuildVersioning.1.0.0.51\Tools\VersioningVcProj.ps1" "$(ProjectDir)"</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -270,9 +266,6 @@
       <Command>
       </Command>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>powershell.exe -File "$(ProjectDir)..\packages\AmcomBuildVersioning.1.0.0.51\Tools\VersioningVcProj.ps1" "$(ProjectDir)"</Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

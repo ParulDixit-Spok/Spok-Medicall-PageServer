@@ -372,7 +372,7 @@ FONT 8, "Helv"
 BEGIN
     CTEXT           "Spok",IDC_STATIC,40,10,160,8
     CTEXT           "PageServer",IDC_STATIC,40,25,160,8
-    CTEXT           "Copyright (c) 2017 Spok, Inc.",IDC_STATIC,35,
+    CTEXT           "Copyright (c) 2018 Spok, Inc.",IDC_STATIC,35,
                     100,160,8,SS_CENTERIMAGE
     DEFPUSHBUTTON   "OK",IDOK,110,125,32,14,WS_GROUP
     ICON            IDI_PAGESRV,IDC_STATIC,16,26,20,20
@@ -627,8 +627,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,6,0
- PRODUCTVERSION 1,0,6,0
+ FILEVERSION 11,11,1,0
+ PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -646,14 +646,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "Spok, Inc.\0"
             VALUE "FileDescription", "PageServer\0"
-            VALUE "FileVersion", "1, 0, 6, 0"
+            VALUE "FileVersion", "11, 11, 1, 0\0"
             VALUE "InternalName", "\0"
-            VALUE "LegalCopyright", "Copyright (c) 2017  Spok, Inc.\0"
+            VALUE "LegalCopyright", "Copyright (c) 2018  Spok, Inc.\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "PageServer Engine\0"
-            VALUE "ProductVersion", "1, 0, 6, 0"
+            VALUE "ProductVersion", "0, 0, 0, 0\0"
             VALUE "SpecialBuild", "\0"
         END
     END

@@ -3987,7 +3987,7 @@ PageDlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM)
 							{
 							PrintMessage(MSGTYPE_SYSTEM,
 											hwndGeneralMsg,
-											"Pager not assigned in the log file.");
+											"Pager not assigned in the configuration file. Please check Comports and Queue Control tabs.");
 							}
 						else
 							{

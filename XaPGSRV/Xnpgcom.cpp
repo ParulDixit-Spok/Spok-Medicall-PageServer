@@ -2162,9 +2162,6 @@ IsPageCharOk(char c)
     int k;
     char SSSstring[20];
 
-	//2012-02-22 by LD to check convered status
-		bool IsCoveredBy;
-
 	// for any incoming page request from a TAP input port, 
 	//  this should be initialized as follows, otherwise trouble in ParseFrq().
 	// kgill 2009-04-16
@@ -2300,16 +2297,13 @@ IsPageCharOk(char c)
 				else
 				{
 			// check for coverage.
-					memset(page[iport + PAGE_COM_START].PagerNumber, 0, sizeof(page[0].PagerNumber));
-					//format the pagerID right justifiy
-					sprintf_s<sizeof(page[0].PagerNumber)>(page[iport + PAGE_COM_START].PagerNumber, "%10.10s", page[iport + PAGE_COM_START].Extension);
+			memset(page[iport + PAGE_COM_START].PagerNumber, 0, sizeof(page[0].PagerNumber));
+			//format the pagerID right justifiy
+			sprintf_s<sizeof(page[0].PagerNumber)>(page[iport + PAGE_COM_START].PagerNumber, "%10.10s", page[iport + PAGE_COM_START].Extension);
 
-					//get profile id into filename
+			//get profile id into filename
 			i = CoverDoubleCheck(iport + PAGE_COM_START);
 			
-			//2012-02-22 by LD, it's ok and valid covering.
-		    IsCoveredBy = i != 0;
-//			SingleCovered=i;
 			if( i )
 				{
 				PrintMessage(MSGTYPE_SYSTEM,  
@@ -2319,8 +2313,8 @@ IsPageCharOk(char c)
 								page[PAGE_COV_POS].Extension);
 
 				memset(page[iport + PAGE_COM_START].Extension, 0, sizeof(page[iport + PAGE_COM_START].Extension));
-						//strcpy(page[iport + PAGE_COM_START].Extension, page[PAGE_COV_POS].Extension);
-						strcpy_s<sizeof(page[0].Extension)>(page[iport + PAGE_COM_START].Extension, page[PAGE_COV_POS].Extension);
+				//strcpy(page[iport + PAGE_COM_START].Extension, page[PAGE_COV_POS].Extension);
+				strcpy_s<sizeof(page[0].Extension)>(page[iport + PAGE_COM_START].Extension, page[PAGE_COV_POS].Extension);
 
 				i = GetPagerId(page[iport + PAGE_COM_START].Extension, iport + PAGE_COM_START, BY_PROFILEID);
 
@@ -2353,7 +2347,7 @@ IsPageCharOk(char c)
 			}
 		}
 
-	// step 4 - ??????????? 
+	// step 4 - check if pager assigned 
 	//
 	if(i == FALSE)
 		{
@@ -2365,6 +2359,33 @@ IsPageCharOk(char c)
 		}					
 	else
 		{
+        //check pager and its coverage. Everything looks good so far, moving on
+
+		//DE27916 - SO - 11/13/2018 - Added the following code to fix the issue where page status is ignored 
+		//when page sent using TAP protocol like Messenger Application
+		if (Respect_Paging_Status)
+		{
+			PrintMessage(MSGTYPE_SYSTEM, hwndGeneralMsg,
+				" DoDatabaseWork(): Respect_Paging_Status is set to TRUE in the Xapgsrv.ini file. ");
+			
+			PrintMessage(MSGTYPE_SYSTEM, 
+				hwndGeneralMsg,
+				" DoDatabaseWork(): Page Status for this profile is [%c]",
+				Status[page[iport + PAGE_COM_START].ACKMin].Page[0]);
+
+			if (page[iport + PAGE_COM_START].ACKMin != -1 && page[iport + PAGE_COM_START].ACKMin <=29 && (Status[page[iport + PAGE_COM_START].ACKMin].Page[0]!='Y'))
+			{
+				
+				PrintMessage(MSGTYPE_SYSTEM, hwndGeneralMsg,
+					" DoDatabaseWork(): This profile won't be paged since page status is [%c] and Respect_Paging_Status is set to TRUE. ",
+					Status[page[iport + PAGE_COM_START].ACKMin].Page[0]);
+
+				WriteMessage((iport + PAGE_COM_START), page[iport + PAGE_COM_START].Extension, "PG", "This profile will not be paged since page status is not set to available and Respect_Paging_Status is set in the configuration.", "");
+				
+				return false;
+			}
+		}
+				
 		memset(SSSstring, 0, sizeof(SSSstring));
 			//sprintf(SSSstring, "%%%s", page[iport + PAGE_COM_START].PageType);
 			sprintf_s<20>(SSSstring, "%%%s", page[iport + PAGE_COM_START].PageType);
@@ -2486,53 +2507,9 @@ IsPageCharOk(char c)
 			else
 				{
 				PrintMessage(MSGTYPE_SYSTEM, hwndComMsg, "NO message written to the Spok MessageBase.................");
-				}
+				}				
+			return true;
 
-				//2012-02-22 LD added for checking paging status
-				
-				PrintMessage(MSGTYPE_SYSTEM, hwndGeneralMsg,
-						"* Dodatabase is called here *");
-				
-				if (Respect_Paging_Status)
-				{
-					PrintMessage(MSGTYPE_SYSTEM, hwndGeneralMsg,
-						" Respect_Paging_Status is setup ");
-					if (IsCoveredBy)
-					{
-						PrintMessage(MSGTYPE_SYSTEM, 
-						hwndGeneralMsg,
-						"  Check page[PAGE_COV_POS].ACKMin: [0x%02X]",
-						page[PAGE_COV_POS].ACKMin & 0x0ff);
-						if (page[PAGE_COV_POS].ACKMin != -1 && page[PAGE_COV_POS].ACKMin <=29 && (Status[page[PAGE_COV_POS].ACKMin].Page[0]=='Y' || Status[page[PAGE_COV_POS].ACKMin].Page[0]=='C'))
-						{
-							return true;
-						}
-						else
-						{
-							return false;
-						}
-					}
-					else
-					{
-							PrintMessage(MSGTYPE_SYSTEM, 
-						hwndGeneralMsg,
-						"  Check page[iport + PAGE_COM_START].ACKMin: [0x%02X]",
-						page[iport + PAGE_COM_START].ACKMin & 0x0ff);
-						if (page[iport + PAGE_COM_START].ACKMin != -1 && page[iport + PAGE_COM_START].ACKMin <=29 && (Status[page[iport + PAGE_COM_START].ACKMin].Page[0]=='Y'))
-						{
-							return true;
-						}
-						else
-						{
-							return false;
-						}
-					}
-				}
-				else
-				{
-					return true;	
-				}
-				//return true;
 			}
 		else
 			{
@@ -3190,7 +3167,7 @@ Ixo_Accept_Direct(void)
 
 			GetLocalTime(&starttime[pport]);
 
- 			PrintMessage(MSGTYPE_SYSTEM, hwndComMsg, "Bad PagerId");
+ 			PrintMessage(MSGTYPE_SYSTEM, hwndComMsg, "Bad PagerId or Status");
 			break;
 
 		case ST_BAD_CHECKSUM: //case PABORT2:
