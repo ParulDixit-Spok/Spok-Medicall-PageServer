@@ -2362,7 +2362,7 @@ IsPageCharOk(char c)
         //check pager and its coverage. Everything looks good so far, moving on
 
 		//DE27916 - SO - 11/13/2018 - Added the following code to fix the issue where page status is ignored 
-		//when page sent using TAP protocol like Messenger Application
+		//when page sent using TAP protocol like Messenger Application. It uses the parameter in Xapgsrv.ini file
 		if (Respect_Paging_Status)
 		{
 			PrintMessage(MSGTYPE_SYSTEM, hwndGeneralMsg,
