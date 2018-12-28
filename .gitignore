@@ -91,4 +91,4 @@ rollback.*.json
 
 # Build Pipeline
 StaffAssignment.Tests.sln
-/tests/*/coverage/*
+/tests/*/coverage/*.vs, .nuget, bin,packages, obj,*.dll, *.exe, *.pdb, *.bak, *.tlb, *.log, *.err, *.scc
